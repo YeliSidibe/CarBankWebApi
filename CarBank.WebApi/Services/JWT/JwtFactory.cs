@@ -45,7 +45,6 @@ namespace CarBank.WebApi.Services.JWT
                 signingCredentials: _jwtOptions.SigningCredentials);
 
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
-
             return encodedJwt;
         }
 

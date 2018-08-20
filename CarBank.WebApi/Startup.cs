@@ -61,7 +61,7 @@ namespace CarBank.WebApi
             }
 
             app.UseCors(builder =>
-                        builder.WithOrigins("http://localhost:3000")
+                        builder.WithOrigins("http://localhost:3000", "https://localhost:3000")
                                .AllowAnyHeader().AllowAnyMethod().SetPreflightMaxAge(TimeSpan.FromSeconds(2520))
                         );
 

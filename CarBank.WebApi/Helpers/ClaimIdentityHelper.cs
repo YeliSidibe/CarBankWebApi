@@ -11,7 +11,7 @@ namespace CarBank.WebApi.Helpers
     {
         public async Task<ClaimsIdentity> GetClaimsIdentity(string userName, string password, bool userHasBeenAuthenticated, IJwtFactory _jwtFactory, UserManager<ApplicationUser> _userManager)
         {
-            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(userName))
                 return await Task.FromResult<ClaimsIdentity>(null);
 
             // get the user to verifty

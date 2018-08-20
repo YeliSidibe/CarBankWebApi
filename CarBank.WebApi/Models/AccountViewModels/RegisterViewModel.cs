@@ -13,8 +13,8 @@ namespace CarBank.WebApi.Models.AccountViewModels
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        //[Required]
+        //[StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -27,13 +27,13 @@ namespace CarBank.WebApi.Models.AccountViewModels
         [Display(Name ="FirstName")]
         public string FirstName     { get; set; }
         [Display(Name = "MiddleName")]
-        [Required]
         public string MiddleName { get; set; }
         [Display(Name = "LastName")]
         [Required]
         public string LastName { get; set; }
-        [Required]
+        //[Required]
         [Display(Name = "PhoneNumber")]
         public string PhoneNumber { get; set; }
+        public bool ExternalProviderLogin { get; set; }
     }
 }
